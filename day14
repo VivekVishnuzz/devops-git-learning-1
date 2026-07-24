@@ -1,0 +1,47 @@
+Configuration Management = making many servers look the same.
+
+Ansible helps you automate setup (install apps, create users, start services).
+
+Ansible is agentless → connects using SSH.
+
+Ansible uses YAML Playbooks to describe tasks.
+
+Inventory file = list of servers.
+
+Modules = actions (install package, copy file, start service).
+
+Idempotent = running playbook again won’t break anything.
+
+Handlers = run only when something changes.
+
+Facts = basic system info Ansible collects.
+
+Roles = organized way to reuse tasks.
+
+Puppet needs agents; Ansible doesn’t.
+
+Puppet = pull model; Ansible = push model.
+
+Ansible is easier to learn for beginners.
+
+Used for quick automation in DevOps projects.
+
+Important Commands
+ansible all -m ping -i inventory
+ansible-playbook setup.yml -i inventory
+ansible all -m yum -a "name=httpd state=present"
+ansible-vault encrypt secrets.yml
+ansible-galaxy init myrole
+
+Real-World Usage
+
+Set up 100 servers with the same apps in one click.
+
+Automatically install and start services like Nginx, Docker, or MySQL.
+
+Summary (4 lines)
+
+Ansible automates server setup with simple YAML files.
+It is agentless and works over SSH.
+Puppet needs agents and is harder for beginners.
+Ansible is faster and easier for DevOps teams to use daily.
